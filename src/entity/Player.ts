@@ -194,8 +194,8 @@ export function setPlayerRobeColor(player: IPlayer, color: number | string, colo
         [
           [playerCoatPrimary, color],
           [playerCoatSecondary, colorSecondary],
-          // Note: Most of the real color replace for the player's magic is done in 
-          // pixiUtils within addSpriteAnimated so that it only replaces the colors of 
+          // Note: Most of the real color replace for the player's magic is done in
+          // pixiUtils within addSpriteAnimated so that it only replaces the colors of
           // the magic.  When the replace was done here on the whole player sprite, the
           // transparency of the magic caused color replace problems. However, there is
           // some solid pink in the idle and walk animations which gets replaced right here
@@ -244,7 +244,8 @@ export function resetPlayerForNextLevel(player: IPlayer, underworld: Underworld)
   const modifier = player.unit.modifiers[investmentId];
   if (modifier) {
     if (player) {
-      const dividend = Math.round(player.statPointsUnspent * (modifier.quantity / 100));
+      const dividendcap = player.statPointsUnspent * (modifier.quantity / 100) < (modifier.quantity * 4);
+      const dividend = dividendcap ? Math.round(player.statPointsUnspent * (modifier.quantity / 100)) : Math.round(modifier.quantity * 4);
       player.statPointsUnspent += dividend;
       if (globalThis.player === player) {
         queueCenteredFloatingText(`${i18n(investmentId)}: ${dividend} SP`);
@@ -264,7 +265,7 @@ export function updateGlobalRefToPlayerIfCurrentClient(player: IPlayer) {
 }
 // Converts a player entity into a serialized form
 // that can be saved as JSON and rehydrated later into
-// a full player entity 
+// a full player entity
 // This is the opposite of load
 export function serialize(player: IPlayer): IPlayerSerialized {
   const { unit, ...rest } = player;
@@ -337,7 +338,7 @@ export function load(player: IPlayerSerialized, index: number, underworld: Under
     playerLoaded.unit.x = NaN;
     playerLoaded.unit.y = NaN;
     // Make sure that isSpawned state is properly synced.  If they are inPortal,
-    // then they must also have isSpawned == false or else they wont be able to 
+    // then they must also have isSpawned == false or else they wont be able to
     // respawn from a NaN, NaN position
     playerLoaded.isSpawned = false;
     Image.hide(playerLoaded.unit.image);
@@ -407,7 +408,7 @@ export function enterPortal(player: IPlayer, underworld: Underworld) {
 export function resetPlayerForSpawn(player: IPlayer, underworld: Underworld) {
 
   Image.hide(player.unit.image);
-  // Make sure to resolve the moving promise once they enter the portal or else 
+  // Make sure to resolve the moving promise once they enter the portal or else
   // the client queue will get stuck
   player.unit.resolveDoneMoving(true);
   // Move "portaled" unit out of the way to prevent collisions and chaining while portaled
@@ -603,7 +604,7 @@ export function incrementPresentedRunesForPlayer(player: Pick<IPlayer, 'lockedRu
   const shuffledRunes = underworld.getShuffledRunesForPlayer(globalThis.player);
   player.runePresentedIndex = incrementPresentedRunesIndex(player.runePresentedIndex, config.RUNES_PER_LEVEL, shuffledRunes, player.lockedRunes);
   // Remove old unlocked level indexes
-  // Note: This must occur AFTER incrementPresentedRunesIndex so that 
+  // Note: This must occur AFTER incrementPresentedRunesIndex so that
   // it doesn't skip over runes that were omitted due to previously locked runes
   player.lockedRunes = player.lockedRunes.filter(lr => lr.runePresentedIndexWhenLocked === undefined);
 
