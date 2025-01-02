@@ -39,6 +39,7 @@ export default function registerStatUpgradeModifiers() {
           statBump = modifyStatBumpAmount(statBump, unitStatKey, player);
 
           player.unit[unitStatKey] += statBump;
+          player.unit.manaPerTurn = player.unit.manaMax;
           const nonMaxStatKey = stat.replace('Max', '') as keyof Pick<Unit.IUnit, "attackRange" | "mana" | "health" | "stamina">;
           if (stat.endsWith('Max') && typeof player.unit[nonMaxStatKey] === 'number') {
             player.unit[nonMaxStatKey] += statBump;
