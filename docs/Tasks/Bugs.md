@@ -17,7 +17,7 @@ Multiplayer--Friend (host) got to choose class spec at level two, I had to wait 
     - Friend also got level up stat points at level four, where I did not get any. I was dead at the time, so it might have impacted that
 - I spawned a deathmason on level 1 and I'm getting these errors:
     -    Guard against infinite loop, unit tried to move but it was not its turn.  Clearing stamina
-    - Cannot remove subsprite spell-effects/modifierShield.png subsprite is missing from sprite.children
+    - Cannot remove subsprite spell-effects/modifiers/modifierShield.png subsprite is missing from sprite.children
     - on the unfocused browser (edge), it's not clearing the red portals after they're used
 - Stamina is incorrect for selectedUnit of other player
     - after they walked into a stamina potion

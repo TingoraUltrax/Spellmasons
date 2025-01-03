@@ -490,11 +490,11 @@
             <key type="filename">images/spell-effects/growth_7.png</key>
             <key type="filename">images/spell-effects/growth_8.png</key>
             <key type="filename">images/spell-effects/growth_9.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_1.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_2.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_3.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_4.png</key>
-            <key type="filename">images/spell-effects/modifierShield.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_1.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_2.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_3.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_4.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierShield.png</key>
             <key type="filename">images/spell-effects/recall_1.png</key>
             <key type="filename">images/spell-effects/recall_2.png</key>
             <key type="filename">images/spell-effects/recall_3.png</key>
@@ -1148,12 +1148,12 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_10.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_5.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_6.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_7.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_8.png</key>
-            <key type="filename">images/spell-effects/modifierPoisonDrip_9.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_10.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_5.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_6.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_7.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_8.png</key>
+            <key type="filename">images/spell-effects/modifiers/modifierPoisonDrip_9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>

@@ -24,8 +24,8 @@ import { GHOST_ARCHER_ID } from '../entity/units/ghost_archer';
 import { MANA_VAMPIRE_ID } from '../entity/units/manaVampire';
 import { DARK_SUMMONER_ID } from '../entity/units/darkSummoner';
 import { DARK_PRIEST_ID } from '../entity/units/darkPriest';
-import { runeHardenedMinionsId } from '../modifierHardenedMinions';
-import { runeSharpTeethId } from '../modifierSharpTeeth';
+import { runeHardenedMinionsId } from '../modifiers/modifierHardenedMinions';
+import { runeSharpTeethId } from '../modifiers/modifierSharpTeeth';
 
 
 const overrides: { [unitId: string]: { exclude: boolean, properties: { manaCost?: number } } } = {

@@ -6,9 +6,9 @@ import { skyBeam } from '../VisualEffects';
 import { playDefaultSpellSFX } from './cardUtils';
 import { addWarningAtMouse } from '../graphics/PlanningView';
 import { CardRarity, probabilityMap } from '../types/commonTypes';
-import { thornsId } from '../modifierThorns';
-import { runeThornyDecoysId } from '../modifierThornyDecoys';
-import { runeHardenedMinionsId } from '../modifierHardenedMinions';
+import { thornsId } from '../modifiers/modifierThorns';
+import { runeThornyDecoysId } from '../modifiers/modifierThornyDecoys';
+import { runeHardenedMinionsId } from '../modifiers/modifierHardenedMinions';
 
 const id = 'decoy 3';
 const spell: Spell = {

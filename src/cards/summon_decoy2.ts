@@ -7,9 +7,9 @@ import { playDefaultSpellSFX } from './cardUtils';
 import floatingText from '../graphics/FloatingText';
 import { addWarningAtMouse } from '../graphics/PlanningView';
 import { CardRarity, probabilityMap } from '../types/commonTypes';
-import { runeThornyDecoysId } from '../modifierThornyDecoys';
-import { thornsId } from '../modifierThorns';
-import { runeHardenedMinionsId } from '../modifierHardenedMinions';
+import { runeThornyDecoysId } from '../modifiers/modifierThornyDecoys';
+import { thornsId } from '../modifiers/modifierThorns';
+import { runeHardenedMinionsId } from '../modifiers/modifierHardenedMinions';
 
 const id = 'decoy 2';
 const spell: Spell = {
